@@ -7,8 +7,8 @@ namespace BMI
         static void Main(string[] args)
         {
             List<Diak> list = new List<Diak>();
-            string[] sorok = File.ReadAllLines("BMI.txt"
-                , System.Text.Encoding.Latin1);
+            var sorok = File.ReadAllLines("BMI.txt"
+                , System.Text.Encoding.Latin1).Skip(1); ;
             foreach (var sor in sorok)
             {
                 Console.WriteLine(sor);
