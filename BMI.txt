@@ -7,3 +7,4 @@ Varga Bence;17;170;65
 Horváth Zsolt;16;185;80
 Molnár Réka;18;158;50
 Lakatos Dániel;17;172;77
+Radványi Tamás;17;185;82
