@@ -4,7 +4,7 @@
     {
       static void Main(string[] args)
         {
-            List<Dia> diak = new List<Dia>()
+            List<Diak> diak = new List<Diak>()
             {
                
             };
