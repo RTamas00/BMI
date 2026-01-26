@@ -19,8 +19,29 @@ namespace BMI
                 int súly = Convert.ToInt32(darabok[3]);
                 Diak d = new Diak(név, életkor, magasság, súly);
                 List.Add(d);
-            }
+            
+
         }
+            Console.Clear();
+            foreach (var d in list)
+            {
+                Console.WriteLine();
+                Console.WriteLine(d);
+            }
+            Console.WriteLine($"3. a, feladat: A diákok száma: {list.Count}");
+            Diak legmagasabb = list[0];
+            foreach (var d in list)
+            {
+                if (Diak.Magasság > legmagasabb.Magasság)
+                {
+                    legmagasabb = Diak;
+                }
+            Console.WriteLine($"3. b, feladat: A legmagasabb diák: {legmagasabb.Név}, {legmagasabb.Magasság} cm");
+
+
+            }
+
+
         }
 
     }
