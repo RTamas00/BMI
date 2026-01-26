@@ -51,10 +51,42 @@ namespace BMI
                 Console.WriteLine($"5. d, feladat: A diákok átlagos súlya: {atlag:F1} kg");
             }
 
+            int egeszsegesDb = 0;
+            foreach (var d in list)
+            {
+                if (d.BMI() == "normál")
+                {
+                    egeszsegesDb++;
+                }
+            }
 
+            Console.WriteLine($"5. b, feladat: Egészséges BMI-jű diákok száma: {egeszsegesDb}");
+
+            bool vanTothEva = false;
+
+            foreach (var d in list)
+            {
+                if (d.Név == "Tóth Éva")
+                {
+                    vanTothEva = true;
+                    break;
+                }
+            }
+
+            Console.WriteLine("----------------");
+
+            if (vanTothEva)
+                Console.WriteLine("5. c, feladat: Van Tóth Éva a diákok között");
+            else
+                Console.WriteLine("5. c, feladat: Nincs Tóth Éva a diákok között");
+
+            Console.ReadKey();
         }
     }
 }
+        
+    
+
 
     
 
