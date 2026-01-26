@@ -42,6 +42,13 @@ namespace BMI
                 {
                     Console.WriteLine($"{d.Név}: {d.BMI()}");
                 }
+                double atlag = 0;
+                foreach (var Diak in list)
+                {
+                    atlag += d.Súly;
+                }
+                atlag/= list.Count;
+                Console.WriteLine($"5. d, feladat: A diákok átlagos súlya: {atlag:F1} kg");
             }
 
 
