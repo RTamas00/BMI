@@ -25,5 +25,26 @@ namespace BMI
         {
             return $"Név: {Név}, Életkor: {Életkor}, Magasság: {Magasság} cm, Súly: {Súly} kg";
         }
+        public string BMI()
+        { 
+        double magasságM = Magasság / 100.0;
+        double BMI = Súly / (magasságM * magasságM);
+            if (BMI < 18.5)
+            {
+                return "sovány";
+            }
+            else if (BMI >= 18.5 && BMI < 25)
+            {
+                return "normál";
+            }
+            else if (BMI >= 25 && BMI < 30)
+            {
+                return "túlsúlyos";
+            }
+            else
+            {
+                return "elhízott";
+            }
+        }
     }
 }
