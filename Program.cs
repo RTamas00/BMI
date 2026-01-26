@@ -81,6 +81,14 @@ namespace BMI
                 Console.WriteLine("5. c, feladat: Nincs Tóth Éva a diákok között");
 
             Console.ReadKey();
+            string fajlba = "Név; BMI/n";
+            foreach (var d in list)
+            {
+               double magasságM = d.Magasság / 100.0;
+                double BMI = d.Súly / (magasságM * magasságM);
+                fajlba += d.Név + ";" + BMI + "/n";
+            }
+            File.WriteAllText("egeszseges_diakok.txt", fajlba);
         }
     }
 }
